@@ -12,6 +12,7 @@ services:
        net.ipv6.conf.all.forwarding: 1
      ports:
        - 80:80
+       - 8081:8081 #for api (example:topology)
      dns:
        - 127.0.0.1
      privileged: true
