@@ -1,0 +1,18 @@
+version: "3.3"
+
+services:
+   otbr:
+     container_name: otbr
+     image: openthread/otbr:latest
+     volumes:
+       - /dev/ttyACM1:/dev/ttyACM0
+     sysctls:
+       net.ipv6.conf.all.disable_ipv6: 0
+       net.ipv4.conf.all.forwarding: 1
+       net.ipv6.conf.all.forwarding: 1
+     ports:
+       - 80:80
+     dns:
+       - 127.0.0.1
+     privileged: true
+     command: ["--radio-url", "spinel+hdlc+uart:///dev/ttyACM0"]
