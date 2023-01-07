@@ -1,4 +1,4 @@
-# A project that launches an openthread border through docker-compose.
+# Docker openthread border-router (matter)
 
 1. Check that the Dongle stick is connected to the port (ex: ttyACM1) specified in the configuration file.
 2. If you have several sticks in the gateway (for example, one for Zigbee and the other for Thread, they can be confused). Pass them through by-id
